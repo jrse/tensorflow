@@ -22,13 +22,13 @@ limitations under the License.
 // library available on the Raspberry Pi.
 //
 // Full build instructions are at tensorflow/contrib/pi_examples/README.md.
-
+#include <stdio.h>
 #include <jpeglib.h>
 #include <setjmp.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include <fstream>
 #include <vector>
-
+#include <cstddef>
 #include "tensorflow/core/framework/graph.pb.h"
 #include "tensorflow/core/framework/tensor.h"
 #include "tensorflow/core/graph/default_device.h"
@@ -50,7 +50,6 @@ using tensorflow::int32;
 using tensorflow::Status;
 using tensorflow::string;
 using tensorflow::Tensor;
-
 // Takes a file name, and loads a list of labels from it, one per line, and
 // returns a vector of the strings. It pads with empty strings so the length
 // of the result is a multiple of 16, because our model expects that.

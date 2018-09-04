@@ -39,6 +39,7 @@ INCLUDES := \
 -I/usr/local/include \
 -I. \
 -I$(DOWNLOADSDIR) \
+-L$(DOWNLOADSDIR)/nsync/builds/default.linux.c++11/\
 -I$(DOWNLOADSDIR)/eigen/ \
 -I$(PROTOGENDIR) \
 -I$(PBTGENDIR)
@@ -53,7 +54,8 @@ LIBS := \
 -lpthread \
 -lm \
 -ljpeg \
--lz
+-lz \
+-lnsync
 LIBFLAGS :=
 
 EXECUTABLE_SRCS := tensorflow/contrib/pi_examples/label_image/label_image.cc
