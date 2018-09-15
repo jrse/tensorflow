@@ -66,8 +66,10 @@ Status SendCameraCommand(int fh, int request, void* arg) {
   if (r == -1) {
     LOG(ERROR) << "SendCameraCommand error " << errno << " (" << strerror(errno)
                << ")";
+    /*
     return tensorflow::errors::Unknown("SendCameraCommand error ", errno,
-                                       strerror(errno));
+                                       strerror(errno));*/
+    return tensorflow::errors::Unknown("SendCameraCommand error ");
   }
   return Status::OK();
 }
